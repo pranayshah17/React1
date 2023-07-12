@@ -1,8 +1,13 @@
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function App() {
   return (
-    <h1>hello world</h1>
-  );
+    <>
+      <RouterProvider router={Navbar} />
+    </>
+  )
 }
 
 export default App;
