@@ -5,13 +5,13 @@ function About() {
   return (
     <>
       <h1>About Page</h1>
-      <NavLink>
+      <NavLink to="/details/mobile">
         <button className="btn btn-primary">Mobile</button>
       </NavLink>
-      <NavLink>
+      <NavLink to="details/laptop">
         <button className="btn btn-primary">Laptop</button>
       </NavLink>
-      <NavLink>
+      <NavLink to="details/tv">
         <button className="btn btn-primary">Tv</button>
       </NavLink>
     </>

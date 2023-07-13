@@ -1,5 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function Details() {
-  return <h1>This is {}'s Details</h1>;
+  const params = useParams();
+  const { item } = params;
+  return <h1>This is {item}'s Details</h1>;
 }
+export default Details;
