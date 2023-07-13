@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const login = () => {
+    localStorage.setItem("login", true);
+  };
+  const navigate = useNavigate();
+  useEffect(() => {
+    let login = localStorage.getItem("login");
+    if (login) {
+      navigate("/");
+    }
+  });
   return (
     <>
       <div className="container p-5 ">
@@ -40,7 +51,7 @@ function Login() {
               Check me out
             </label>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" onClick={login} className="btn btn-primary">
             Login
           </button>
         </form>

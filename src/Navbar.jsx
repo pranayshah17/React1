@@ -1,7 +1,31 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar() {
+  //   const logout = () => {
+  //     localStorage.setItem("login", false);
+  //   };
+  //   const navigate = useNavigate();
+  //   useEffect(() => {
+  //     let logout = localStorage.getItem("login");
+  //     if (logout) {
+  //       navigate("/logout");
+  //     }
+  //   });
+  //   const logindetails = () => {
+  //     localStorage.setItem("login", true);
+  //   };
+  //   const navigate1 = useNavigate();
+  //   useEffect(() => {
+  //     let login = localStorage.getItem("login");
+  //     if (login) {
+  //       navigate1("/login");
+  //     }
+  //   });
+  //   const logindetails = () => {
+  //     return navigate("/login");
+  //   };
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -44,7 +68,11 @@ function Navbar() {
               </li>
             </ul>
             <NavLink to="login">
-              <button className="btn btn-success" type="submit">
+              <button
+                className="btn btn-success"
+                // onClick={logindetails}
+                type="submit"
+              >
                 Login
               </button>
             </NavLink>

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function About() {
   return (
@@ -8,12 +8,13 @@ function About() {
       <NavLink to="/details/mobile">
         <button className="btn btn-primary">Mobile</button>
       </NavLink>
-      <NavLink to="details/laptop">
+      <NavLink to="/details/laptop">
         <button className="btn btn-primary">Laptop</button>
       </NavLink>
-      <NavLink to="details/tv">
+      <NavLink to="/details/tv">
         <button className="btn btn-primary">Tv</button>
       </NavLink>
+      <Outlet />
     </>
   );
 }
