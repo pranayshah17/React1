@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
-import React, { createContext } from "react";
+import React from "react";
 
-const wrapperContext = createContext();
+// const wrapperContext = createContext(null);
 
 function App() {
   return (
