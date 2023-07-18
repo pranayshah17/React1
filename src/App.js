@@ -1,7 +1,14 @@
+import Navbar from "./Navbar";
+import React, { createContext } from "react";
+
+const wrapperContext = createContext();
 
 function App() {
   return (
-    <h1>hello world</h1>
+    <>
+      <Navbar />
+
+    </>
   );
 }
 
