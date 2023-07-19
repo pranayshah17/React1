@@ -1,7 +1,12 @@
+import Parent from "./Parent";
+import UseMemo from "./UseMemo";
 
 function App() {
   return (
-    <h1>hello world</h1>
+    <>
+      {/* <UseMemo /> */}
+      <Parent />
+    </>
   );
 }
 
