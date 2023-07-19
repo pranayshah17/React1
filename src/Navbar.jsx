@@ -1,6 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { WrapperContext } from "./App";
+import { useContext } from "react";
+
 function Navbar() {
+  const { seachFormValue, setSearchFormValue } = useContext(WrapperContext);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -19,14 +23,14 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="" className="nav-link active" aria-current="page">
+                <NavLink to="/" className="nav-link active" aria-current="page">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to="" className="nav-link">
+                <NavLink to="/cocktail" className="nav-link">
                   Cocktails
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">
@@ -35,6 +39,8 @@ function Navbar() {
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                value={seachFormValue}
+                onChange={(e) => setSearchFormValue(e.target.value)}
               />
               <button className="btn btn-outline-success" type="submit">
                 Search
