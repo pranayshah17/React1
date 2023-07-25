@@ -18,7 +18,7 @@ export default function UseMemo() {
   }, [counterOne]);
   return (
     <div>
-      <button onClick={increment}>Increment - {counterOne}</button>
+      <button onClick={() => increment()}>Increment - {counterOne}</button>
       <span>{isEven ? "even" : "odd"}</span>
       <div>
         <button onClick={decrement}>Decrement - {counterTwo}</button>

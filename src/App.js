@@ -4,8 +4,8 @@ import UseMemo from "./UseMemo";
 function App() {
   return (
     <>
-      {/* <UseMemo /> */}
-      <Parent />
+      <UseMemo />
+      {/* <Parent /> */}
     </>
   );
 }
